@@ -9,7 +9,7 @@ function App() {
 
   const getArticles = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/");
+      const res = await axios.get(process.env.REACT_APP_API_LOCAL);
       setArticles(res.data);
     } catch (error) {
       console.log(error);
